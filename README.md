@@ -1,25 +1,32 @@
-# GenAI Cold Email Generator Using LLM
+# 📧 Cold Mail Generator
+Cold email generator for services company using groq, langchain and streamlit. It allows users to input the URL of a company's careers page. The tool then extracts job listings from that page and generates personalized cold emails. These emails include relevant portfolio links sourced from a vector database, based on the specific job descriptions. 
 
-## Project Overview
-The GenAI Cold Email Generator is an end-to-end application designed to help software and AI service companies create personalized cold emails targeting potential clients. Utilizing the Llama 3.1 open-source language model (LLM), along with ChromaDB, LangChain, and Streamlit, this tool streamlines the email generation process based on job postings.
+**Imagine a scenario:**
 
-## Problem Statement
-In a competitive market, companies like TCS and Infosys must employ effective strategies to acquire projects from clients such as Nike and JP Morgan. One such approach is sending cold emails tailored to the specific needs outlined in job postings. This tool automates that process by generating personalized cold emails based on job requirements.
+- Nike needs a Principal Software Engineer and is spending time and resources in the hiring process, on boarding, training etc
+- Atliq is Software Development company can provide a dedicated software development engineer to Nike. So, the business development executive (Mohan) from Atliq is going to reach out to Nike via a cold email.
 
-## How It Works
-1. **Job Posting Analysis**: The tool extracts job postings from client websites using the LangChain framework.
-2. **Skill Extraction**: Llama 3.1 analyzes the extracted data to identify required skills and job roles.
-3. **Portfolio Matching**: ChromaDB is used to retrieve stored portfolios relevant to the identified skills.
-4. **Email Generation**: The LLM composes a tailored cold email, highlighting the company’s relevant capabilities and linking to specific portfolio examples.
+![img.png](imgs/img.png)
 
-## Features
-- Automated email generation based on real job postings.
-- Customization of cold emails to match client needs.
-- Integration with a vector database for efficient portfolio matching.
-- User-friendly interface built with Streamlit.
+## Architecture Diagram
+![img.png](imgs/architecture.png)
 
-## Technical Stack
-- **Language Model**: Llama 3.1
-- **Vector Database**: ChromaDB
-- **Data Processing Framework**: LangChain
-- **Web Interface**: Streamlit
+## Set-up
+1. To get started we first need to get an API_KEY from here: https://console.groq.com/keys. Inside `app/.env` update the value of `GROQ_API_KEY` with the API_KEY you created. 
+
+
+2. To get started, first install the dependencies using:
+    ```commandline
+     pip install -r requirements.txt
+    ```
+   
+3. Run the streamlit app:
+   ```commandline
+   streamlit run app/main.py
+   ```
+   
+
+Copyright (C) Codebasics Inc. All rights reserved.
+
+**Additional Terms:**
+This software is licensed under the MIT License. However, commercial use of this software is strictly prohibited without prior written permission from the author. Attribution must be given in all copies or substantial portions of the software.
