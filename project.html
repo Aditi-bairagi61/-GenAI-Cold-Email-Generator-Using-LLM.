@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Mail Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="url"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #email-output {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <label for="url-input">Cold Mail Generator</label>
+    <input type="url" id="url-input" placeholder="Enter a URL..." required>
+    <button onclick="generateEmail()">Submit</button>
+
+    <div id="email-output" style="display:none;">
+        <p><strong>Subject:</strong> Expert Machine Learning Solutions for Your Business Needs</p>
+        <p>Dear Hiring Manager,</p>
+        <p>I came across the job posting for an Entry ML Engineer (Remote Work Option) and was impressed by the exciting work your team is doing in the field of AI and Machine Learning. As a Business Development Executive at AtliQ, I'd like to introduce you to our company's capabilities in delivering top-notch Machine Learning solutions that can help you achieve your business goals.</p>
+        <p>At AtliQ, we have a proven track record of empowering enterprises with tailored solutions that foster scalability, process optimization, cost reduction, and heightened overall efficiency. Our team of experts has extensive experience in developing advanced analytics systems, data-driven decision-making tools, and AI-powered solutions that can directly impact your business.</p>
+        <p>Our expertise in Machine Learning, Software Engineering, and Data Science enables us to develop and deploy robust models that can handle complex data sets and provide actionable insights. We're well-versed in popular technologies such as Python, Scikit-learn, TensorFlow, Kubeflow, and Spark, which aligns with your job requirements.</p>
+        <p>I'd like to showcase some of our relevant work in Machine Learning and Python:</p>
+        <ul>
+            <li>Our Machine Learning portfolio: <a href="https://example.com/ml-python-portfolio" target="_blank">https://example.com/ml-python-portfolio</a></li>
+            <li>Our Python portfolio: <a href="https://example.com/python-portfolio" target="_blank">https://example.com/python-portfolio</a></li>
+        </ul>
+        <p>These examples demonstrate our capabilities in building and deploying Machine Learning models using Python and other relevant technologies.</p>
+        <p>We believe that our expertise and experience make us an ideal partner for your business needs. If you're looking for a reliable and skilled team to help you develop advanced analytics systems, we'd be delighted to discuss how we can assist you.</p>
+        <p>Please feel free to contact me to schedule a call to explore how AtliQ can help you achieve your business objectives.</p>
+        <p>Best regards,</p>
+        <p>Mohan<br>Business Development Executive<br>AtliQ</p>
+    </div>
+</div>
+
+<script>
+    function generateEmail() {
+        const urlInput = document.getElementById('url-input').value;
+        if (urlInput) {
+            document.getElementById('email-output').style.display = 'block';
+        } else {
+            alert('Please enter a valid URL.');
+        }
+    }
+</script>
+
+</body>
+</html>
